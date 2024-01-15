@@ -1,30 +1,61 @@
 const Info = () => {
   return (
-    <div className='bg-black h-full'>
-      <h2 className='text-6xl text-center font-extrabold text-zinc-400'>
-        Information
-      </h2>
-      <div className='h-1/2 w-1/2'>
-        <div className='items-center flex-col justify-center'>
-          <h3 className='text-4xl text-center font-extrabold text-zinc-400'>
-            Causes Of Brain Tumor
-          </h3>
-          <p className='text-center text-lg font-extrabold text-zinc-400 m-10'>
-            The exact causes of brain tumors are not always clear, and they can
-            be influenced by a combination of genetic, environmental, and
-            lifestyle factors. While the majority of brain tumors are not linked
-            to specific causes, certain risk factors and associations have been
-            identified. Here are some factors that may contribute to the
-            development of brain tumors:
+    <div className=' flex flex-col md:flex-row h-full bg-black w-full '>
+      <div className='h-full w-full md:w-1/2 py-10 m-3'>
+        <h1 className='text-white m-3 text-center md:text-5xl sm:text-3xl text-2xl font-bold py-2'>
+          Overview Of A Brain Tumor
+        </h1>
+        <div className='flex flex-col justify-center items-center'>
+          <p className='text-white text-center text-lg m-2'>
+            A brain tumor is an abnormal growth of cells within the brain or
+            spinal cord, which can be either benign or malignant. Benign tumors
+            are non-cancerous and typically grow slowly, while malignant tumors
+            are cancerous and may spread to surrounding tissues. The effects of
+            a brain tumor depend on its size, location, and type. Common
+            symptoms include headaches, seizures, changes in vision, and
+            personality alterations. The tumor can interfere with normal brain
+            function, leading to neurological deficits such as weakness,
+            numbness, or difficulty with speech and motor skills. Treatment
+            options include surgery, radiation therapy, and chemotherapy, and
+            the prognosis varies depending on factors like tumor type, stage,
+            and the patient's overall health. Early detection and prompt
+            intervention are crucial for effective management of brain tumors.
           </p>
-          <ul className=' text-center font-bold text-zinc-400'>
-            <span className='font-extrabold'>Genetic Factor: </span> Some rare
-            genetic syndromes, such as neurofibromatosis, Li-Fraumeni syndrome,
-            and von Hippel-Lindau disease, are associated with an increased risk
-            of developing brain tumors.
+        </div>
+      </div>
+      <div className='h-full w-full md:w-1/2 py-10 m-3'>
+        <h1 className='text-white text-center m-3 md:text-5xl sm:text-3xl text-2xl font-bold py-2'>
+          Symptoms
+        </h1>
+        <div className='flex flex-col justify-center items-center'>
+          <p className='text-white text-center w-4/5 font-semibold'>
+            Signs and symptoms of mental illness can vary, depending on the
+            disorder, circumstances and other factors. Mental illness symptoms
+            can affect emotions, thoughts and behaviors. Examples of signs and
+            symptoms include:
+          </p>
+          <ul className='text-white list-disc w-3/4'>
+            <li className='text-white m-3'>Feeling sad or down</li>
+            <li className='text-white m-3'>
+              Confused thinking or reduced ability to concentrate
+            </li>
+            <li className='text-white m-3'>
+              Excessive fears or worries, or extreme feelings of guilt
+            </li>
+            <li className='text-white m-3'>
+              Extreme mood changes of highs and lows
+            </li>
+            <li className='text-white m-3'>
+              Withdrawal from friends and activities
+            </li>
+            <li className='text-white m-3'>
+              Significant tiredness, low energy or problems sleeping
+            </li>
+            <li className='text-white m-3'>
+              Excessive anger, hostility or violence
+            </li>
           </ul>
         </div>
-        <div></div>
       </div>
     </div>
   );
