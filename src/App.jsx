@@ -8,8 +8,8 @@ const App = () => {
     <>
       <HeroPage />
       <Analytics />
-      <BrainTumor />
       <Info />
+      <BrainTumor />
     </>
   );
 };
