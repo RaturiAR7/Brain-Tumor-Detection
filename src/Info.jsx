@@ -2,11 +2,11 @@ const Info = () => {
   return (
     <div className=' flex flex-col md:flex-row h-full bg-black w-full '>
       <div className='h-full w-full md:w-1/2 py-10 m-3'>
-        <h1 className='text-white m-3 text-center md:text-5xl sm:text-3xl text-2xl font-bold py-2'>
+        <h3 className='text-4xl text-center font-extrabold text-zinc-400 m-3'>
           Overview Of A Brain Tumor
-        </h1>
+        </h3>
         <div className='flex flex-col justify-center items-center'>
-          <p className='text-white text-center text-lg m-2'>
+          <p className='text-center font-semibold text-lg m-2 text-zinc-400'>
             A brain tumor is an abnormal growth of cells within the brain or
             spinal cord, which can be either benign or malignant. Benign tumors
             are non-cancerous and typically grow slowly, while malignant tumors
@@ -24,35 +24,40 @@ const Info = () => {
         </div>
       </div>
       <div className='h-full w-full md:w-1/2 py-10 m-3'>
-        <h1 className='text-white text-center m-3 md:text-5xl sm:text-3xl text-2xl font-bold py-2'>
+        <h1 className='text-4xl text-center font-extrabold text-zinc-400 m-3'>
           Symptoms
         </h1>
         <div className='flex flex-col justify-center items-center'>
-          <p className='text-white text-center w-4/5 font-semibold'>
-            Signs and symptoms of mental illness can vary, depending on the
-            disorder, circumstances and other factors. Mental illness symptoms
-            can affect emotions, thoughts and behaviors. Examples of signs and
-            symptoms include:
+          <p className='text-center font-semibold text-lg m-2 text-zinc-400'>
+            The signs and symptoms of a brain tumor can vary widely depending on
+            factors such as the tumor's size, location, and rate of growth. It's
+            important to note that some brain tumors may not cause noticeable
+            symptoms, and they can be discovered incidentally during imaging
+            studies for unrelated issues. Common signs and symptoms of a brain
+            tumor may include:
           </p>
           <ul className='text-white list-disc w-3/4'>
-            <li className='text-white m-3'>Feeling sad or down</li>
-            <li className='text-white m-3'>
-              Confused thinking or reduced ability to concentrate
+            <li className='text-zinc-400 m-3'>
+              Persistent or worsening headaches, often more severe in the
+              morning.
             </li>
-            <li className='text-white m-3'>
-              Excessive fears or worries, or extreme feelings of guilt
+            <li className='text-zinc-400 m-3'>
+              New-onset seizures or an increase in the frequency of existing
+              seizures.
             </li>
-            <li className='text-white m-3'>
-              Extreme mood changes of highs and lows
+            <li className='text-zinc-400 m-3'>
+              Blurred or double vision, changes in peripheral vision, or
+              difficulty with visual coordination.
             </li>
-            <li className='text-white m-3'>
-              Withdrawal from friends and activities
+            <li className='text-zinc-400 m-3'>
+              Weakness or numbness in the limbs, often on one side of the body.
             </li>
-            <li className='text-white m-3'>
-              Significant tiredness, low energy or problems sleeping
+            <li className='text-zinc-400 m-3'>
+              Unexplained nausea and vomiting, especially if it is persistent.
             </li>
-            <li className='text-white m-3'>
-              Excessive anger, hostility or violence
+            <li className='text-zinc-400 m-3'>
+              Difficulty walking, lack of coordination, and problems with
+              balance.
             </li>
           </ul>
         </div>
