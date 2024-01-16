@@ -1,7 +1,7 @@
 const HeroPage = () => {
   return (
-    <div className='h-screen w-full bg-black flex flex-row items-center justify-center'>
-      <div className='h-1/2 w-1/2'>
+    <div className='h-screen w-full bg-black flex flex-col md:flex-row items-center justify-center'>
+      <div className='h-1/2 md:w-1/2'>
         <div className='items-center flex-col justify-center'>
           <h1 className='text-6xl text-center font-extrabold text-zinc-400'>
             BRAIN TUMOR DETECTION
@@ -14,7 +14,7 @@ const HeroPage = () => {
           </h5>
         </div>
       </div>
-      <div className='w-1/2 flex justify-center items-center'>
+      <div className='md:w-1/2 flex justify-center items-center'>
         <img
           src='https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tb7LuJkv4b6o_MxleMKC1w.jpeg'
           alt=''

@@ -2,11 +2,11 @@ const Info = () => {
   return (
     <div className=' flex flex-col md:flex-row h-full bg-black w-full '>
       <div className='h-full w-full md:w-1/2 py-10 m-3'>
-        <h3 className='text-4xl text-center font-extrabold text-zinc-400 m-3'>
+        <h3 className='text-4xl text-center font-extrabold text-zinc-400 m-3 mx-4'>
           Overview Of A Brain Tumor
         </h3>
         <div className='flex flex-col justify-center items-center'>
-          <p className='text-center font-semibold text-lg m-2 text-zinc-400'>
+          <p className='text-center font-semibold text-lg m-2 text-zinc-400 mx-4'>
             A brain tumor is an abnormal growth of cells within the brain or
             spinal cord, which can be either benign or malignant. Benign tumors
             are non-cancerous and typically grow slowly, while malignant tumors

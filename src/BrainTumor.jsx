@@ -5,6 +5,7 @@ const BrainTumor = () => {
   const [model, setModel] = useState(null);
   const [inputImage, setInputImage] = useState(null);
   const [prediction, setPrediction] = useState(null);
+  const [predictionLoad, setPredictionLoad] = useState(false);
 
   useEffect(() => {
     const loadModel = async () => {
@@ -31,6 +32,7 @@ const BrainTumor = () => {
   };
 
   const handlePrediction = async () => {
+    setPredictionLoad(true);
     if (model && inputImage) {
       try {
         // Load the image
@@ -60,6 +62,8 @@ const BrainTumor = () => {
         img.dispose();
         normalizedImg.dispose();
         reshapedImg.dispose();
+        setInputImage(null);
+        setPredictionLoad(false);
       } catch (error) {
         console.error("Error making prediction:", error);
       }
@@ -77,16 +81,18 @@ const BrainTumor = () => {
             How It Works?
           </h3>
           <div className='flex flex-col justify-center items-center'>
-            <p className='text-center text-black text-lg m-2 '>
+            <p className='text-center text-black text-lg m-4 '>
               Our platform utilizes advanced deep learning algorithms to analyze
               MRI images dropped by users, swiftly and accurately predicting the
               presence of brain tumors. The process is seamless – just upload
               your MRI scan, and our intelligent system will assess the data for
               potential abnormalities. It's a quick, non-invasive way to gain
-              insights into your health. We prioritize your privacy. At [Your
-              Website Name], we understand the sensitivity of medical
-              information. Rest assured, we do not save or store any of the
-              images you provide.
+              insights into your health. We prioritize your privacy. At{" "}
+              <span className='font-semibold font'>
+                AR7 Brain Tumor Detection
+              </span>
+              , we understand the sensitivity of medical information. Rest
+              assured, we do not save or store any of the images you provide.
             </p>
           </div>
         </div>
@@ -95,15 +101,37 @@ const BrainTumor = () => {
             Drop The Image
           </h1>
           <div className='flex flex-col justify-center items-center'>
-            <input type='file' accept='image/*' onChange={handleImageChange} />
+            <input
+              type='file'
+              accept='image/*'
+              onChange={handleImageChange}
+              className='cursor-pointer'
+              onClick={() => setPredictionLoad(false)}
+            />
             <button
               onClick={handlePrediction}
-              className='bg-black font-semibold text-[#00df9a] w-[200px] rounded-md text-lg my-6 mx-auto md:mx-0 py-2'
+              className='bg-black font-semibold text-[#00df9a] w-[200px] rounded-md text-lg my-6 mx-auto md:mx-0 py-2 hover:bg-slate-700'
             >
               Predict
             </button>
-            {prediction !== null && (
-              <p>Prediction: {prediction ? "YES" : "NO"}</p>
+
+            {inputImage === null && predictionLoad === true && (
+              <h4 className='font-bold'>Please select a MRI image</h4>
+            )}
+            {inputImage !== null && predictionLoad === true && (
+              <h4 className='font-bold'>Detecting...</h4>
+            )}
+            {predictionLoad === false && prediction !== null && (
+              <p className='text-black font-bold'>
+                Prediction:{" "}
+                {prediction ? (
+                  <span className='text-red-500'>Brain Tumor Detected</span>
+                ) : (
+                  <span className='text-[#00df9a]'>
+                    No Brain Tumor Detected
+                  </span>
+                )}
+              </p>
             )}
           </div>
         </div>
