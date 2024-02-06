@@ -1,14 +1,49 @@
-import React from "react";
+import { useState, useRef, useEffect } from "react";
 import NeuronRenderer from "./NeuronRenderer";
+import "./App.css";
 
 const Analytics = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          section.classList.add("animate"); // Add a CSS class for animation
+        } else {
+          section.classList.remove("animate"); // Remove the CSS class for animation
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      threshold: 0.5, // Adjust the threshold as needed
+    });
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []); // Empty dependency array ensures the effect runs only once on mount
+
   return (
     <div className='w-full h-1/2 bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto items-center grid md:grid-cols-2'>
-        <div className='flex justify-center items-center'>
+        <div className=' flex justify-center items-center'>
           <NeuronRenderer />
         </div>
-        <div className='flex flex-col justify-center'>
+        <div
+          ref={sectionRef}
+          className='animated-section flex flex-col justify-center'
+        >
           <p className='text-[#00df9a] font-bold '>
             Neuron : The basic building block of brain
           </p>
