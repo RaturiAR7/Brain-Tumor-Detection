@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import NeuronRenderer from "./NeuronRenderer";
 import "./App.css";
 
@@ -35,9 +35,9 @@ const Analytics = () => {
   }, []); // Empty dependency array ensures the effect runs only once on mount
 
   return (
-    <div className='w-full h-1/2 bg-white py-16 px-4'>
-      <div className='max-w-[1240px] mx-auto items-center grid md:grid-cols-2'>
-        <div className=' flex justify-center items-center'>
+    <div className='w-full h-auto bg-white py-16 px-4'>
+      <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 gap-4'>
+        <div className='flex justify-center items-center'>
           <NeuronRenderer />
         </div>
         <div
@@ -45,10 +45,10 @@ const Analytics = () => {
           className='animated-section flex flex-col justify-center'
         >
           <p className='text-[#00df9a] font-bold '>
-            Neuron : The basic building block of brain
+            Neuron: The basic building block of the brain
           </p>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
-            Brain Tumor Affect The Neuron
+            Brain Tumor Affects the Neuron
           </h1>
           <p className='text-lg'>
             A brain tumor can affect neurons by compressing, displacing, and

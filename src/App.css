@@ -1,6 +1,6 @@
 .animated-section {
   opacity: 0;
-  transform: translateX(-500px); /* Initially move element 50px to the left */
+  transform: translateX(-50px); /* Initially move element 50px to the left */
 }
 
 .animated-section.animate {
