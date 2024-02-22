@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
-import NeuronRenderer from "./NeuronRenderer";
+import { useRef, useEffect, lazy, Suspense } from "react";
 import "./App.css";
 
+const NeuronRender = lazy(() => import("./NeuronRenderer.jsx"));
 const Analytics = () => {
   const sectionRef = useRef(null);
 
@@ -38,7 +38,9 @@ const Analytics = () => {
     <div className='w-full h-auto bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 gap-4'>
         <div className='flex justify-center items-center'>
-          <NeuronRenderer />
+          <Suspense fallback={<h1> Loading... </h1>}>
+            <NeuronRender />
+          </Suspense>
         </div>
         <div
           ref={sectionRef}
